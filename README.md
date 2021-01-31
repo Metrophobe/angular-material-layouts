@@ -1,10 +1,16 @@
-# Material - Ex 2 - Navigation 
+# Material - Ex 3 - Lists and Group Based Components 
 
-This example covers material navigation in general. 
+This example covers material group-based components 
 
-  * Material Toolbar
-  * Sidenav (Container , Content , Sidenav)
-  * Menus and Submenus (Regular / Dynamic) 
+  * Lists
+  * Nav Lists
+  * Grid Lists 
+  * Expansion Panels 
+  * Accordions
+  * Cards 
+  * Tabs 
+  * Vertical Steppers 
+  * Horizontal Steppers 
   
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 

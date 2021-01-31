@@ -21,8 +21,165 @@
             </div>
         </mat-toolbar>
         <br>
-        <p class="mat-display-3">Navigation in Material</p>
-        <p>This is a sample peace of text to show the main area of the content</p>
+        <p class="mat-display-3">Lists and Group Components</p>
+        <p>Lists, Nav Lists and Grid Lists in action .... </p>
+        <br>
+        <mat-divider></mat-divider>
+        <br>
+        <p class="mat-display-2">Material List</p>
+        <mat-list>
+            <mat-list-item>Item </mat-list-item>
+            <mat-list-item>Item </mat-list-item>
+            <mat-list-item>Item </mat-list-item>
+        </mat-list>
+        <br>
+        <mat-divider></mat-divider>
+        <br>
+        <p class="mat-display-2">Material Nav List</p>
+        <mat-nav-list>
+            <mat-list-item> 
+                <mat-icon matListIcon>home</mat-icon> 
+                <h3 matLine>Home</h3>
+                <p matLine>Testing</p>   
+            </mat-list-item>
+            <mat-list-item> 
+                <mat-icon matListIcon>info</mat-icon> 
+                <h3 matLine>About</h3>
+                <p matLine>Testing</p>   
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item> 
+                <mat-icon matListIcon>star</mat-icon> 
+                <h3 matLine>Services</h3>
+                <p matLine>Testing</p>   
+            </mat-list-item>
+            <a mat-list-item> Regular Nav List Item  </a>
+        </mat-nav-list>
+        <br>
+        <mat-divider></mat-divider>
+        <br>
+        <p class="mat-display-2">Mat Grid List </p>
+        <mat-grid-list cols="2" rowHeight="2:1" gutterSize="1em" raised>
+            <mat-grid-tile colspan="2"> Tile 1 </mat-grid-tile>
+            <mat-grid-tile rowspan="2"> Tile 2 </mat-grid-tile>
+            <mat-grid-tile> Tile 3 </mat-grid-tile>
+            <mat-grid-tile> Tile 4 </mat-grid-tile>
+        </mat-grid-list>
+        <br>
+        <mat-divider></mat-divider>
+        <br>
+        <p class="mat-display-2">Material Expansion Panel</p>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Membership One Enrolment  
+                </mat-panel-title>
+                <mat-panel-description>
+                    Description of Panel
+                </mat-panel-description> 
+            </mat-expansion-panel-header>
+            Content of Expansion Panel 
+            <mat-action-row>
+                <button mat-button><mat-icon>home</mat-icon>Enroll</button>
+            </mat-action-row>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Membership Two Enrolment  
+                </mat-panel-title>
+                <mat-panel-description>
+                    Description of Panel
+                </mat-panel-description> 
+            </mat-expansion-panel-header>
+            Content of Expansion Panel 
+            <mat-action-row>
+                <button mat-button><mat-icon>home</mat-icon>Enroll</button>
+            </mat-action-row>
+        </mat-expansion-panel>
+        <br>
+        <mat-divider></mat-divider>
+        <br>
+        <p class="mat-display-2">Material Accordion</p>
+        <mat-accordion multi="true">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Membership One Enrolment  
+                </mat-panel-title>
+                <mat-panel-description>
+                    Description of Panel
+                </mat-panel-description> 
+            </mat-expansion-panel-header>
+            Content of Expansion Panel 
+            <mat-action-row>
+                <button mat-button><mat-icon>home</mat-icon>Enroll</button>
+            </mat-action-row>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Membership Two Enrolment  
+                </mat-panel-title>
+                <mat-panel-description>
+                    Description of Panel
+                </mat-panel-description> 
+            </mat-expansion-panel-header>
+            Content of Expansion Panel 
+            <mat-action-row>
+                <button mat-button><mat-icon>home</mat-icon>Enroll</button>
+            </mat-action-row>
+        </mat-expansion-panel>
+    </mat-accordion>  
+        <br>
+        <mat-divider></mat-divider>
+        <br>
+        <p class="mat-display-2">Material Cards</p>
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>title</mat-card-title>
+                <mat-card-subtitle>subtitle</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                Content of Card
+            </mat-card-content>
+            <mat-card-actions align="end">
+                <button mat-button>Ok</button>
+            </mat-card-actions>
+        </mat-card>
+        <br>
+        <mat-divider></mat-divider>
+        <br>
+        <p class="mat-display-2">Material Tabs</p>
+        <mat-tab-group>
+            <mat-tab label="TabHeader1">Tab 1</mat-tab>
+            <mat-tab label="TabHeader">Tab 2</mat-tab>
+            <mat-tab label="TabTabHeader2">Tab 3</mat-tab>
+        </mat-tab-group>
+        <br>
+        <mat-divider></mat-divider>
+        <br>
+        <p class="mat-display-2">Horizontal Material Stepper</p>
+        <mat-horizontal-stepper>
+            <mat-step label="label1">
+                Step 1
+            </mat-step>
+            <mat-step label="label2">
+                Step 2
+            </mat-step>
+        </mat-horizontal-stepper>
+        <br>
+        <mat-divider></mat-divider>
+        <br>
+        <p class="mat-display-2">Vertical Material Stepper</p>
+        <mat-vertical-stepper>
+            <mat-step label="label1" completed=true optional=true>
+                Step 1
+            </mat-step>
+            <mat-step label="label2">
+                Step 2
+            </mat-step>
+        </mat-vertical-stepper>
     </mat-sidenav-content>
 </mat-sidenav-container>
 
@@ -37,6 +194,5 @@
          <button mat-menu-item> Subitem 1 </button>
          <button mat-menu-item> Subitem 2 {{data.age}} </button>
          <button mat-menu-item> Subitem 3 {{data.name}} </button>
-   </ng-template>
-    
+   </ng-template>    
 </mat-menu>
