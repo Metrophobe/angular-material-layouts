@@ -1,15 +1,10 @@
-# Material - Ex 1 - Getting Started With Material Components 
+# Material - Ex 2 - Navigation 
 
-This project is just a basic intro showing you how to utilise the material components. You will also notice that the folder structure is a tad different. A separate material components module was added so that you do not pollute the main module with components.  It is recommended to use this approach for modularising things and to make them as structured as possible.  In the next branch you will find some material navigation. 
+This example covers material navigation in general. 
 
-These are the list of components you will find:
-
-  * Buttons 
-  * Button Toggles 
-  * Icons 
-  * Badges 
-  * Progressbar 
-  * Progress Spinner 
+  * Material Toolbar
+  * Sidenav (Container , Content , Sidenav)
+  * Menus and Submenus (Regular / Dynamic) 
   
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 

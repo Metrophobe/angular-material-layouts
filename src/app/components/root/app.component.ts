@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  
+  data = {
+    name:"Peter",
+    age:50
+  }
+  
+  opened = false;
   title = 'Material';
-  notify=20;
+  
 }

@@ -1,86 +1,42 @@
-<p class="mat-display-4">Angular Material</p>
-<hr>
-<p class="mat-display-1">Buttons</p>
-<button mat-button>Regular Button</button>
-<button mat-raised-button>Raised Button</button>
-<button mat-flat-button>Regular Button</button>
-<button mat-stroked-button>Stroked Button</button>
-<button mat-icon-button>Icon</button>
-<button mat-fab>Fab</button>
-<button mat-mini-fab>Fab</button>
-<button mat-button disableRipple color="primary">Primary</button>
-<button mat-button color="accent">Accent</button>
-<button mat-button color="warn">Warn</button>
-<button mat-raised-button color="primary">Primary</button>
-<button mat-raised-button color="accent">Accent</button>
-<button mat-raised-button color="warn">Warn</button>
-<hr>
-<p class="mat-display-1">Toggles</p>
-<mat-button-toggle #toggle>{{toggle.checked}}</mat-button-toggle>
-<br>
-<mat-button-toggle-group #group='matButtonToggleGroup'>
-    <mat-button-toggle value="react">React</mat-button-toggle>
-    <mat-button-toggle value="angular">Angular</mat-button-toggle>
-    <mat-button-toggle value="vue">Vue</mat-button-toggle>
-</mat-button-toggle-group>
-{{group.value}}
-<br>
-<mat-button-toggle-group #groupTwo='matButtonToggleGroup' multiple>
-    <mat-button-toggle value="react">React</mat-button-toggle>
-    <mat-button-toggle value="angular">Angular</mat-button-toggle>
-    <mat-button-toggle value="vue">Vue</mat-button-toggle>
-</mat-button-toggle-group>
-{{groupTwo.value}}
-<br>
-<hr>
-<p class="mat-display-1">Typography</p>
-<p class="mat-display-4">Text</p>
-<p class="mat-display-3">Text</p>
-<p class="mat-display-2">Text</p>
-<p class="mat-display-1">Text</p>
-<p class="mat-headline">Mat Headline equivalent to h1</p>
-<p class="mat-title">This equivalent to h2</p>
-<p class="mat-subheading-2">This is quivalent to h3</p>
-<p class="mat-subheading-1">This is equivalent to h4</p>
-<p class="mat-body-1">This is equivalent to body text</p>
-<p class="mat-body-2">Equivalent to body bold text</p>
-<p class="mat-caption">Equivalent to caption text</p>
-<p>Elements using Typography Class</p>
-<div class="mat-typography">
-    <h1>Text</h1>
-    <h2>Text</h2>
-    <h3>Text</h3>
-    <h4>Text</h4>
-</div>
-<hr>
-<p class="mat-display-1">Icons</p>
-<mat-icon color="primary">grade</mat-icon> 
-<mat-icon color="accent">grade</mat-icon> 
-<mat-icon color="warn">grade</mat-icon> 
-<hr>
-<p class="mat-display-1">Badges</p>
-<span matBadge="5">Notifications</span>
-<br>
-<span [matBadge]="notify" matBadgeSize="large" [matBadgeHidden]="notify===0"  matBadgeColor="primary">Notifications</span>
-<br>
-<span  matBadge="5" matBadgeSize="small" matBadgePosition="above before" matBadgeColor="accent">Notifications</span>
-<br> 
-<span  matBadge="5" matBadgeSize="medium" matBadgePosition="below before" matBadgeColor="warn">Notifications</span>
-<br> 
-<span  matBadge="5" matBadgeSize="large" matBadgePosition="above after" matBadgeOverlap="false">Notifications</span>
-<br>
-<hr>
-<p class="mat-display-1">Progress Bars and Spinners</p>
-<br>
-<mat-progress-spinner value="80"></mat-progress-spinner>
-<br>
-<mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
-<br>
-<mat-progress-bar color="accent" mode="determinate" value="40"></mat-progress-bar>
-<br>
-<mat-progress-bar color="accent" mode="indeterminate"></mat-progress-bar>
-<br>
+<mat-sidenav-container>
+    <mat-sidenav [(opened)]=opened>
+            SideNav
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary" class="navbar">
+            <div>
+                <mat-icon (click)="opened = !opened">menu</mat-icon> 
+                Material Toolbar
+            </div>
+            <div>
+                <button mat-flat-button color="primary" [matMenuTriggerFor]="menu">
+                    Home
+                </button>
+                <button mat-flat-button color="primary">
+                    About
+                </button>
+                <button mat-flat-button color="primary">
+                    Services
+                </button>
+            </div>
+        </mat-toolbar>
+        <br>
+        <p class="mat-display-3">Navigation in Material</p>
+        <p>This is a sample peace of text to show the main area of the content</p>
+    </mat-sidenav-content>
+</mat-sidenav-container>
 
+<mat-menu #menu="matMenu">
+    <button mat-menu-item>Item 1 </button>
+    <button mat-menu-item> Item 2 </button>
+    <button mat-menu-item [matMenuTriggerData]="{data:data}" [matMenuTriggerFor]="submenu">Item 3 </button>
+</mat-menu>
 
-
-
+<mat-menu #submenu="matMenu" >
+   <ng-template matMenuContent let-data="data">
+         <button mat-menu-item> Subitem 1 </button>
+         <button mat-menu-item> Subitem 2 {{data.age}} </button>
+         <button mat-menu-item> Subitem 3 {{data.name}} </button>
+   </ng-template>
+    
+</mat-menu>

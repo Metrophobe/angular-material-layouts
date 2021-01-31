@@ -1,0 +1,25 @@
+.navbar{
+    justify-content: space-between;
+    font-weight: 100;
+}
+
+
+mat-icon {
+    padding-right: 1rem;
+}
+
+span {
+    padding-right: 1rem;
+}
+
+mat-sidenav-container{
+    height:100%;
+}
+
+mat-sidenav{
+    width:200px;
+}
+
+mat-sidenav , mat-sidenav-content{
+    padding: 15px;
+}

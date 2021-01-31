@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from '../components/root/app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { MaterialModule } from './material.module';
     AppComponent
   ],
   imports: [
+    FormsModule, 
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule, 
