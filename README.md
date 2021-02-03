@@ -1,16 +1,11 @@
-# Material - Ex 3 - Lists and Group Based Components 
+# Material - Ex 4 - Forms and Input 
 
-This example covers material group-based components 
+This example forms and input elements  
 
-  * Lists
-  * Nav Lists
-  * Grid Lists 
-  * Expansion Panels 
-  * Accordions
-  * Cards 
-  * Tabs 
-  * Vertical Steppers 
-  * Horizontal Steppers 
+  * Formfields
+  * Inputs
+  * Select
+  * Autocomplete
   
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 
