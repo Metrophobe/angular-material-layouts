@@ -15,11 +15,11 @@ export class AppComponent {
   items = [
   {
     value:0, 
-   viewValue:"Italy"
+    viewValue:"Italy"
   },
   {
     value:1, 
-   viewValue:"Hungary"
+    viewValue:"Hungary"
   },
   {
     value:2, 
@@ -35,5 +35,22 @@ export class AppComponent {
   }
   
   options:string[] = ['Angular', 'React', 'Vue'];
+
+  optionsObj:any[] = [
+    {
+      name:"Angular"
+    },{
+      name:"React"
+    },{
+      name:"Vue"
+    }
+  ];
+
+   dispObj = (obj:any):any => {
+     if(obj){
+       return obj.name;
+     }
+   }
+ 
 }
 

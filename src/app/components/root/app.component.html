@@ -61,7 +61,7 @@
         <br>
         <p class="mat-display-2">Autocomplete - using string array</p>
         <mat-form-field>
-            <input matInput placeholder="label" [matAutocomplete]="auto" value="value">
+            <input matInput placeholder="label" [matAutocomplete]="auto">
             <mat-autocomplete #auto="matAutocomplete"> <!-- template reference var-->
                 <mat-option *ngFor="let option of options" [value]="option" >
                     {{option}}
@@ -71,24 +71,12 @@
         <br>
         <mat-divider></mat-divider>
         <br>
-        <p class="mat-display-2">Autocomplete - using object array</p>
+        <p class="mat-display-2">Autocomplete - using object array and 'displayWith' property </p>
         <mat-form-field>
-            <input matInput placeholder="label" [matAutocomplete]="autoObject" value="value">
-            <mat-autocomplete #autoObject="matAutocomplete">
-                <mat-option *ngFor="let option of options" [value]="option" >
-                    {{option}}
-                </mat-option>
-             </mat-autocomplete>
-        </mat-form-field>
-        <br>
-        <mat-divider></mat-divider>
-        <br>
-        <p class="mat-display-2">Autocomplete with Predictive filtering</p>
-        <mat-form-field>
-            <input matInput placeholder="label" [matAutocomplete]=auto value="value">
-            <mat-autocomplete #auto=matAutocomplete>
-                <mat-option *ngFor="let option of options" [value]=option >
-                    {{option}}
+            <input matInput placeholder="label" [matAutocomplete]="autoObj" >
+            <mat-autocomplete #autoObj="matAutocomplete" [displayWith]="dispObj"> <!-- template reference var-->
+                <mat-option *ngFor="let option of optionsObj" [value]="option">
+                    {{option.name}}
                 </mat-option>
              </mat-autocomplete>
         </mat-form-field>
