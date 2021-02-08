@@ -1,98 +1,23 @@
-<mat-sidenav-container>
-    <mat-sidenav [(opened)]=opened mode="over"> <!-- over side push-->
-            SideNav
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <mat-toolbar color="primary" class="navbar">
-            <div>
-                <mat-icon (click)="opened = !opened">menu</mat-icon> 
-                Material Toolbar
-            </div>
-            <div>
-                <button mat-flat-button color="primary" [matMenuTriggerFor]="menu">
-                    Home
-                </button>
-                <button mat-flat-button color="primary">
-                    About
-                </button>
-                <button mat-flat-button color="primary">
-                    Services
-                </button>
-            </div>
-        </mat-toolbar>
-        <br>
-        <p class="mat-display-3">Forms and Input</p>
-        <p>Forms and Input elements in action .... </p>
-        <br>
-        <mat-divider></mat-divider>
-        <br>
-        <p class="mat-display-2">Input </p>
-        <mat-form-field floatLabel="auto" hideRequiredMarker appearance="fill">
-            <input matInput placeholder="label" value="value">
-        </mat-form-field>
-        <mat-divider></mat-divider> 
-        <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline" color="warn">
-            <input matInput placeholder="label" value="value">
-        </mat-form-field> 
-        <mat-divider></mat-divider>
-        <mat-form-field floatLabel="auto">
-            <input matInput placeholder="label" value="value">
-        </mat-form-field> 
-        <mat-divider></mat-divider>
-        <mat-form-field floatLabel="auto" color="warn">
-            <input matInput placeholder="label" value="value">
-        </mat-form-field>
-        <br>
-        <mat-divider></mat-divider>
-        <br>
-        <p class="mat-display-2">Select </p>
-        <mat-form-field>
-        <mat-select placeholder="Please Select a Country" [(ngModel)]="selectedValue" name="item">
-            <mat-option *ngFor="let item of items" [value]="item.value">
-                {{item.viewValue}}
+<h1>Ex 5 - Material Filtered Autocomplete</h1>
+
+<!-- Every control should be placed in a matform field-->
+<mat-form-field>
+    <!-- this goroups tha label -->
+    <mat-label>Country</mat-label>
+    <!-- The input, which is:  
+        - a matInput ... duh
+        - has the matAutocomplete property bound to the autocomplate component via the template reference (countries)
+        - is also using reactive forms (instead of ngmodel) and is tied to the control variable from the ts file 
+        - hides the required marker (don't ask me why... I wanted to)
+        - you may also set the color and the appearance ... yes that's makeup  
+    -->
+    <input matInput type="text" [matAutocomplete]="countries" [formControl]="control" hideRequiredMarker> 
+    <mat-autocomplete #countries="matAutocomplete">
+        <!-- the auto complete component iterates across all filtered countries ... note async pipe is needed since we are dealing with an observable array of countries -->
+            <mat-option *ngFor="let country of filteredCountries | async" [value]="country.name"> <!-- country name property -->
+                {{country.name}}
             </mat-option>
-        </mat-select>
-        </mat-form-field>
-        <h1>
-            {{selectedValue | json }}
-        </h1>
-        <br>
-        <mat-divider></mat-divider>
-        <br>
-        <p class="mat-display-2">Autocomplete - using string array</p>
-        <mat-form-field>
-            <input matInput placeholder="label" [matAutocomplete]="auto">
-            <mat-autocomplete #auto="matAutocomplete"> <!-- template reference var-->
-                <mat-option *ngFor="let option of options" [value]="option" >
-                    {{option}}
-                </mat-option>
-             </mat-autocomplete>
-        </mat-form-field>
-        <br>
-        <mat-divider></mat-divider>
-        <br>
-        <p class="mat-display-2">Autocomplete - using object array and 'displayWith' property </p>
-        <mat-form-field>
-            <input matInput placeholder="label" [matAutocomplete]="autoObj" >
-            <mat-autocomplete #autoObj="matAutocomplete" [displayWith]="dispObj"> <!-- template reference var-->
-                <mat-option *ngFor="let option of optionsObj" [value]="option">
-                    {{option.name}}
-                </mat-option>
-             </mat-autocomplete>
-        </mat-form-field>
-    </mat-sidenav-content>
-  <mat-sidenav-container>
-
-<mat-menu #menu="matMenu">
-    <button mat-menu-item>Item 1 </button>
-    <button mat-menu-item> Item 2 </button>
-    <button mat-menu-item [matMenuTriggerData]="{data:data}" [matMenuTriggerFor]="submenu">Item 3 </button>
-</mat-menu>
-
-<mat-menu #submenu="matMenu" >
-   <ng-template matMenuContent let-data="data">
-         <button mat-menu-item> Subitem 1 </button>
-         <button mat-menu-item> Subitem 2 {{data.age}} </button>
-         <button mat-menu-item> Subitem 3 {{data.name}} </button>
-   </ng-template>    
-</mat-menu>
+    </mat-autocomplete>
+    <!-- and we finally show a hint ... -->
+    <mat-hint align="end">Start typing.. :)</mat-hint>
+</mat-form-field>

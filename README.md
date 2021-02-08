@@ -1,12 +1,17 @@
-# Material - Ex 4 - Forms and Input 
+# Material - Ex 5 - Filtered Autocomplete
+  
+This example covers the following concepts: 
 
-This example forms and input elements  
-
-  * Formfields
-  * Inputs
-  * Select
-  * Autocomplete
-  * 
+- fetching json data via this api https://restcountries.eu/rest/v2/all
+- use of http client to get data ....
+- proper use of observables , subscription , unsubscription .... 
+- lifecycle hooks ngOnInit and ngOnDestroy 
+- using the async pipe
+- typescript interface use ... 
+- use of template reference .... 
+- filtering of the countries as you type inside an angular-material text input 
+- 'reactive forms' and the 'forms' module
+- rxjs operators like map , debounceTime , distinctUntilChanged , pipe ... 
   
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 

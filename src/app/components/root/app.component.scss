@@ -1,29 +1,10 @@
-.navbar{
-    justify-content: space-between;
+h1{
+    font-size: 3em;
+    color:white;
+    font-weight:100;
+}
+
+input{
+    color:white;
     font-weight: 100;
-}
-
-
-mat-icon {
-    padding-right: 1rem;
-}
-
-span {
-    padding-right: 1rem;
-}
-
-mat-sidenav-container{
-    height:100%;
-}
-
-mat-sidenav{
-    width:200px;
-}
-
-mat-sidenav , mat-sidenav-content{
-    padding: 15px;
-}
-
-mat-grid-tile{
-    background-color: #09f;
 }
